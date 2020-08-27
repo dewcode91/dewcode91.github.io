@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Exploiting rate limit vulnerbility on facebook servers"
+title:  "Exploiting rate limit vulnerability on Facebook servers"
 date:   2020-08-23 21:03:36 +0530
 categories: Facebook-whitehat Bug-Bounty
 ---
