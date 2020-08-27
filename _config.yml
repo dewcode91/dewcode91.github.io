@@ -24,8 +24,9 @@ plainwhite:
   # generate social links in footer
   social_links:
     twitter: dewcode91
-    github:  dewcode91
-    #linkedIn: dewanand2ram7vishal
+    github: dewcode91
+    facebook: dewcode91
+    #linkedIn: 
     #rss: rss
     #dribbble: jekyll
     #flickr:   jekyll
