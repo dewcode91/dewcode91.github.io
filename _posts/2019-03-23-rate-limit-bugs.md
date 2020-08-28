@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Exploiting rate limit vulnerability on Facebook servers"
+title:  "Exploiting Race Condition Vulnerability on Facebook servers"
 date:   2020-08-23 21:03:36 +0530
 categories: Facebook Bug-Bounty
 ---
