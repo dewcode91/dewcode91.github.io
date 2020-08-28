@@ -4,8 +4,6 @@ title:  "Exploiting Race Condition Vulnerability on Facebook servers"
 date:   2020-08-23 21:03:36 +0530
 categories: Facebook Bug-Bounty
 ---
-#### Description
-
 Some applications determine the user's access rights or role at login, and then store this information in a user-controllable location, such as a hidden field, cookie, or preset query string parameter. The application makes subsequent access control decisions based on the submitted value. For example:
 
 https://insecure-website.com/login/home.jsp?admin=true
