@@ -15,7 +15,7 @@ According to OWASP, Code Injection is the general term for attack types which co
 #### Example
 If an application passes a parameter sent via a GET request to the PHP include() function with no input validation, the attacker may try to execute code other than what the developer had in mind.
 The URL below passes a page name to the include() function.
-http://testsite.com/index.php?page=phpinfo();
+<http://testsite.com/index.php?page=phpinfo();>
 The phpinfo() function which is useful for gaining information about the configuration of the environment in which the web service runs. An attacker can ask the application to execute his own PHP code.
 
 #### Remote Command Execution (Command injection)
@@ -28,6 +28,6 @@ Some useful system commands (Linux)
 * df — Show information about the file system
 The following request and response is an example of a successful attack:
 #### Request
-http://127.0.0.1/delete.php?filename=bob.txt;id
+<http://127.0.0.1/delete.php?filename=bob.txt;id>
 #### Response
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
