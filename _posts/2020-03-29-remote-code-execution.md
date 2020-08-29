@@ -8,6 +8,7 @@ categories: Bug-Bounty
 Hi! Bug hunters, I am back with another writeup. I will try to simplify Remote Code Execution and Command Execution. Many people think both are the same vulnerability but it’s not.
 Don’t be confused! Code Evaluation, Arbitrary Code Injection, and Code Execution are synonyms of Code Injection. OS injection, Command Injection, and Arbitrary Command Execution are synonyms of Command Execution.
 Code injection allows the attacker to inject his own code that is executed by the application. In Command Injection, the attacker extends the default functionality of the application, which executes system commands. Let's describe both one by one.
+
 #### Remote Code Execution (Code Injection)
 According to OWASP, Code Injection is the general term for attack types which consist of injecting code that is then interpreted/executed by the application. This type of attack exploits poor handling of untrusted data. These types of attacks are usually made possible due to a lack of proper input/output data validation. RCE stands for Remote Code Execution. That allows an attacker to inject their own code remotely on the target application. It totally depends on backend technologies. PHP, JAVA, ASP.NET, Python is the most popular backend technologies.
 
