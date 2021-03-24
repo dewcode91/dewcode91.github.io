@@ -2,7 +2,7 @@ title: Just Another Security Blog
 author: dewcode91
 email: info@dewcode.in
 description: > # this means to ignore newlines until "show_exerpts:"
-This blog is to all about my findigs which i encounter at diffrent bug bounty platfroms. The main purpose of this blog is give-back to infosec community.
+                This blog is to all about my findigs which i encounter at diffrent bug bounty platfroms. The main purpose of this blog is give-back to infosec community.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
