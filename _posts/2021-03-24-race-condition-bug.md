@@ -3,11 +3,8 @@ published: false
 ---
 
 ## Finding and exploiting race condition vulnerability on facebook server
- Finding bugs on facebook was on of the biggest dream of life but it was just a dream when i read about 2014. and later 2019.
-If you are not familiar about race condtion the read this blog. race condition is one of the high severity and easily exploitable bug.
-brfore we jump out to the issue lets talk about my struggle during find this valid. after reading anand prakash and laxman muthiyah blog i decided to 
-find bug on facebook.Struglling with slow internet and electricity issue i note down all endpoint where i try to test. after spwnding 15 days finally i found an endpoint 
-at facebook developers individual verification process. i was successfully able to exploit the issue and reported to facebook team.
+Finding bugs on facebook was on of the biggest dream of my life. when i read this [blog](https://vit.ac.in/alumnus-paid-bounty-15000-dollar-finding-bug-facebook) 2014 and later [this](https://thezerohack.com/hack-any-instagram) in 2019. If you are not familiar about race condtion then read this [blog](https://en.wikipedia.org/wiki/Race_condition).
+Before we jump into the issue, lets talk about my struggle, after reading those 2 blogs i decided to find bug on facebook. I was struggle with slow internet and electricity issue. at the same time i was analyzing 1000 of requests on my burp proxy history to understand what going on, after spending hard time of 15 days, finaly i found my first valid issue on facebook.  
 
 ### Issue 1: Missing rate rimit at facebook developers individual verification.
 
@@ -34,6 +31,13 @@ During testing the above workflow, I came across above described post request wh
 #### Impact
 
 An attacker can send large amount of emails from facebook server to any e-mail account (Bug bounty platforms are not accept this type reports but facebook accepted because of verification endpoint)
+
+#### Timeline 
+          16 May 2019 - Report submitted 
+          23 May 2019 - Triage
+          5 June 2019 - Fixed and Patched
+          5 June 2019 - Bypass Sent
+         15 July 2019 - Issue resolved and Bounty Awarded  $500 + $500
    
 ### Issue 2: Missing rate rimit at facebook Business Verification .
 
@@ -57,8 +61,15 @@ Cookie: // User cookie
 submission_id=xxxxxxxxxxx&challenge_code=67890&challenge_type=email&indexed_id&__user=xxxxxxxxxxxxx&__a=1&__dyn=7xeUmFoO2CeCExUS2qq7E-8GAdyedKnFwn8eVEpyA5EK32q1oxy5Qdgdp98SmaDxW4E8U6ydwJyFEeo8p8-cx210wExuEixycx68w825ocEixWq1owvo7OqbwOzXwKzUeA9wRyUvyolyU6XximbDxeiUdo62iczErK2x0ZxzyGw8nz8a84q1UKh7wg8OqawywWg8oty88E4u2l2Utgvx-6U4a78K0AEbGg9ojwgEmy8eE&__req=y&__be=1&__pc=PHASED%3Abrands_pkg&dpr=1&__rev=1000997435&__s=%3Aen9sbg%3Axzvz6h&__hsi=6719306340508947313-0&fb_dtsg=AQFxSKvkuzNy%3AAQGIG2HsP1Ju&jazoest=22133
 ```
 
-In above Post request `challenge_id` was vulnerable parameter but while trying to brute-force the code, its generate three diffrent types of error messages but server not blocked my ip address. That time i had no idea what to do. I started playing with that request, first i removed some parameters one by one and try to brute-fore the challenge code, i failed each time, suddenly i remove parameter `__req=y&__be=1` from the request and noticed this time the error message was diffrent `You have enter the wrong code! please try again !`. I immediately set a payload for 1000 request to server and found the error was same. I reported this issue to facebook and after 30 minutes,one member of security team reply with `nice catch` and confirm the issue is valid.
+In above Post request `challenge_code` was vulnerable parameter but while trying to brute-force the code, its generate three diffrent types of error messages but server not blocked my ip address. That time i had no idea what to do. I started playing with that request, first i removed some parameters one by one and try to brute-fore the challenge code, i failed each time, suddenly i remove parameter `__req=y&__be=1` from the request and noticed this time the error message was diffrent `You have enter the wrong code! please try again !`. I immediately set a payload for 1000 request to server and found the error was same. I reported this issue to facebook and after 30 minutes,one member of security team reply with `nice catch` and confirm the issue is valid.
 
 #### Impact
-An attacker can bypass email verification protection and can verify owner email, It may possible to create a fake business account with genuine email address of business owner. 
+An attacker can bypass email verification protection and can verify owner email, It may possible to create a fake business account with genuine email address of business owner.
+
+#### Timeline 
+          30 July 2019 - Report submitted 
+          30 July 2019 - Triage
+          15 April 2020 - Issue resolved and Bounty Awarded  $2000
+        
+       
 
