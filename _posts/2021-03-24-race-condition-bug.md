@@ -2,7 +2,7 @@
 published: false
 ---
 
-## Finding and exploiting race condition vulnerbility on facebook server
+## Finding and exploiting race condition vulnerability on facebook server
  Finding bugs on facebook was on of the biggest dream of life but it was just a dream when i read about 2014. and later 2019.
 If you are not familiar about race condtion the read this blog. race condition is one of the high severity and easily exploitable bug.
 brfore we jump out to the issue lets talk about my struggle during find this valid. after reading anand prakash and laxman muthiyah blog i decided to 
@@ -29,11 +29,11 @@ Cookie: // User cookies
 
 ```
 
-During testing the above workflow, I came across the post request where endpoint `email` can control by an attcker, which was not blocking my ip address while submitting multiple requests on facebook server. I was successfully able to exploit this behaviour and reported this issue to facebook security team.    
+During testing the above workflow, I came across above described post request where endpoint `email` can control by an attcker, which was not blocking my ip address while submitting multiple requests on facebook server. I was successfully able to exploit this behaviour and reported this issue to facebook security team.    
 
 #### Impact
 
-An attacker can send large amount of emails from facebook server to any e-mail account (Most of the bug bounty platform not accept this type reports but they do because of verification endpoint. )
+An attacker can send large amount of emails from facebook server to any e-mail account (Bug bounty platforms are not accept this type reports but facebook accepted because of verification endpoint)
    
 
 
