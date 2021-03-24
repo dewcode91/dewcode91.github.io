@@ -2,9 +2,7 @@ title: Just Another Security Blog
 author: dewcode91
 email: info@dewcode.in
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+This blog is to all about my findigs which i encounter at diffrent bug bounty platfroms. The main purpose of this blog is give-back to infosec community.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -26,7 +24,7 @@ plainwhite:
     twitter: dewcode91
     github: dewcode91
     facebook: dewcode91
-    linkedIn: in/dewanand2ram7vishal
+    linkedIn: in/dewcode91
     #rss: rss
     #dribbble: jekyll
     #flickr:   jekyll
