@@ -57,3 +57,8 @@ Cookie: // User cookie
 submission_id=xxxxxxxxxxx&challenge_code=67890&challenge_type=email&indexed_id&__user=xxxxxxxxxxxxx&__a=1&__dyn=7xeUmFoO2CeCExUS2qq7E-8GAdyedKnFwn8eVEpyA5EK32q1oxy5Qdgdp98SmaDxW4E8U6ydwJyFEeo8p8-cx210wExuEixycx68w825ocEixWq1owvo7OqbwOzXwKzUeA9wRyUvyolyU6XximbDxeiUdo62iczErK2x0ZxzyGw8nz8a84q1UKh7wg8OqawywWg8oty88E4u2l2Utgvx-6U4a78K0AEbGg9ojwgEmy8eE&__req=y&__be=1&__pc=PHASED%3Abrands_pkg&dpr=1&__rev=1000997435&__s=%3Aen9sbg%3Axzvz6h&__hsi=6719306340508947313-0&fb_dtsg=AQFxSKvkuzNy%3AAQGIG2HsP1Ju&jazoest=22133
 ```
 
+In above Post request `challenge_id` was vulnerable parameter but while trying to brute-force the code, its generate three diffrent types of error messages but server not blocked my ip address. That time i had no idea what to do. I started playing with that request, first i removed some parameters one by one and try to brute-fore the challenge code, i failed each time, suddenly i remove parameter `__req=y&__be=1` from the request and noticed this time the error message was diffrent `You have enter the wrong code! please try again !`. I immediately set a payload for 1000 request to server and found the error was same. I reported this issue to facebook and after 30 minutes,one member of security team reply with `nice catch` and confirm the issue is valid.
+
+#### Impact
+An attacker can bypass email verification protection and can verify owner email, It may possible to create a fake business account with genuine email address of business owner. 
+
