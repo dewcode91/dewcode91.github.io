@@ -11,12 +11,7 @@ at facebook developers individual verification process. i was successfully able 
 
 ### Issue 1: Missing rate rimit at facebook developers individual verification process.
 
-Individual Verification is a process that allows facebook to gather information about user so they can verify your identity as a person as opposed to a business entity or organization. User can begin the verification process in the Verification section of the `App Dashboard -- Settings -- Basic panel`, or the Individual Verification tab in your account's Developer Settings panel.
-
-During testing the above workflow, I came across the endpoint `email` which was not blocking my ip address while submitting multiple requests on facebook server. I was successfully able to exploit this behaviour and reported this issue to facebook security team.    
-
-
-#### POST Request 
+Individual Verification is a process that allows facebook to gather information about user so they can verify your identity as a person as opposed to a business entity or organization. User can begin the verification process in the Verification section of the `App Dashboard > Settings > Basic panel`, or the Individual Verification tab in your account's Developer Settings panel.
 
 ```
 POST /apps/async/individual_verification/send_contract/?email= HTTP/1.1
@@ -34,9 +29,11 @@ Cookie: // User cookies
 
 ```
 
+During testing the above workflow, I came across the post request where endpoint `email` can control by an attcker, which was not blocking my ip address while submitting multiple requests on facebook server. I was successfully able to exploit this behaviour and reported this issue to facebook security team.    
+
 #### Impact
 
-An attacker can send large amount of emails from facebook server to any e-mail account (Most of the bug bounty platform not accept this type reports but they do because verification endpoint. )
+An attacker can send large amount of emails from facebook server to any e-mail account (Most of the bug bounty platform not accept this type reports but they do because of verification endpoint. )
    
 
 
