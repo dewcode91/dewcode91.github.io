@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Finding and exploiting race condition vulnerability on facebook server
@@ -70,6 +70,3 @@ An attacker can bypass email verification protection and can verify owner email,
           30 July 2019 - Report submitted 
           30 July 2019 - Triage
           15 April 2020 - Issue resolved and Bounty Awarded  $2000
-        
-       
-
